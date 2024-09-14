@@ -149,3 +149,24 @@
         width: 100%;
     }
 }
+@include Responsive($MEDIUM_DEVICE)
+{
+    .container{
+         width: 990px !important;
+
+    }
+}
+@include Responsive($TABLET_DEVICE)
+{
+    .container{
+         width: 750px !important;
+         
+    }
+}
+@include Responsive($WIDE_MOBILE)
+{
+    .container{
+         width: 540px !important;
+         
+    }
+}

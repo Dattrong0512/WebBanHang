@@ -227,7 +227,7 @@ const Header =()=>{
             </div>
             <div className="container">
              <div className="row hero__categories_container">
-                <div className="col-lg-3 hero__categories" >
+                <div className="col-lg-3 col-md-12 col-sm-12 col-xs-12 hero__categories" >
                     <div className="hero__categories_all " onClick={()=>setCategories(!isShowCategories)}>
                         <AiOutlineMenu/>
                         Danh sách sản phẩm 
@@ -253,7 +253,7 @@ const Header =()=>{
                     }
                
                 </div>
-                <div className="col-lg-9 hero__search_container">
+                <div className="col-lg-9 col-md-12 col-sm-12 col-xs-12 hero__search_container">
                     <div className="hero__search">
                         <div className="hero__search_form">
                             <form>
