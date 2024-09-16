@@ -351,23 +351,30 @@ $bannerImg: "/assets/users/images/hero/anhraucuqua.jpg";
 {
     @include header.header-small-device;
     .hero__search{
-        display: grid;
-        .hero__search__phone{
-            margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    .hero__search_form{
+        width: 350px !important;
+        button{
+            width: 150px;
+            height: 50px !important;
         }
-        .hero__search_form{
-            width: 565px !important;
-        }
+    }
+    .hero__search__phone{
 
     }
-    .header__logo{
-        width: max-content;
+    
+}
+@include Responsive($SMALL_DEVICE)
+{   
+    
+    .hero__search_form{
+        width: 350px !important;;
+        button{
+            width: 150px;
+            height: 50px !important;
+        }
     }
-    .hero__categories_all{
-        margin-top: 10px;
-    }
-    .hero__item{
-        margin-left: unset;
-        width: 83.5% !important;
-    }
+    
 }

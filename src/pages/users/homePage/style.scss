@@ -148,6 +148,10 @@
     img{
         width: 100%;
     }
+    @include Responsive($SMALL_DEVICE)
+    {
+        flex-direction: column;
+    }
 }
 @include Responsive($MEDIUM_DEVICE)
 {
@@ -167,6 +171,13 @@
 {
     .container{
          width: 540px !important;
+         
+    }
+}
+@include Responsive($WIDE_MOBILE)
+{
+    .container{
+         width: 350px !important;
          
     }
 }
