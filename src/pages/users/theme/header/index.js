@@ -1,5 +1,6 @@
 
-import { memo, useState } from "react";
+import { memo, useState, useEffect } from "react";
+import { useLocation } from 'react-router-dom';
 import "./style.scss";
 import "utils/formater";
 import { AiOutlineDownCircle, AiOutlineFacebook, AiOutlineInstagram, AiOutlineLinkedin, AiOutlineMail, AiOutlineMenu, AiOutlinePhone, AiOutlineShoppingCart, AiOutlineUpCircle, AiOutlineUser } from "react-icons/ai";
@@ -12,8 +13,10 @@ import{MdEmail} from  "react-icons/md";
 // import { useRef } from "react";
 // import { useEffect } from "react";
 const Header =()=>{
-    const[isShowCategories,setCategories]=useState(false);
-    const[isShowHamburger,setShowHamburger]=useState(true);
+    const location = useLocation();
+    const[isShowHamburger,setShowHamburger]=useState(false);
+    const[isHome,setIsHome]=useState(location.pathname.length <= 1);
+    const[isShowCategories,setShowCategories]=useState(isHome);
     const [menus,setMenus] = useState(
         [
             {
@@ -53,7 +56,18 @@ const Header =()=>{
             },
         ]
     )
-    console.log(isShowHamburger);
+    const categories = [
+        "Thịt tươi",
+        "Rau củ",
+        "Nước trái cây",
+        "Trái cây",
+        "Hải sản"
+    ];
+    useEffect( () => {
+        const isHome = location.pathname.length <= 1;
+        setIsHome(isHome);
+        setShowCategories(isHome);
+    },[location])
     return (
         <>
         <div className={  `hamburger__menu__overlay ${isShowHamburger ? "active" : ""}`} onClick={()=>setShowHamburger(false)}/>
@@ -228,28 +242,21 @@ const Header =()=>{
             <div className="container">
              <div className="row hero__categories_container">
                 <div className="col-lg-3 col-md-12 col-sm-12 col-xs-12 hero__categories" >
-                    <div className="hero__categories_all " onClick={()=>setCategories(!isShowCategories)}>
+                    <div className="hero__categories_all " onClick={()=>setShowCategories(!isShowCategories)}>
                         <AiOutlineMenu/>
                         Danh sách sản phẩm 
                     </div>
                     {isShowCategories &&
                     (<ul className={isShowCategories ? "" : "hidden"}>     
-                        <li>
-                            <Link to="#">Thịt tươi</Link>
-                        </li>
-                        <li>
-                            <Link to="#">Rau củ</Link>
-                        </li>
-                        <li>
-                            <Link to="#">Nước trái cây</Link>
-                        </li>
-                        <li>
-                            <Link to="#">Trái cây</Link>
-                        </li>
-                        <li>
-                            <Link to="#">Hải sản</Link>
-                        </li>
-                    </ul>)
+                        {
+                            categories.map((category,keycate) => (
+                                <li key={keycate}>
+                                <Link to={ROUTERS.USER.PRODUCTS}>{category}</Link>
+                                </li>
+                            ))
+                        }
+                    </ul>
+                    )
                     }
                
                 </div>
@@ -274,6 +281,7 @@ const Header =()=>{
                             </div>
                         </div>
                     </div>
+                    {isHome &&
                     <div className="hero__item">
                         <div className="hero__text">
                             <span> Trái cây tươi</span>
@@ -284,6 +292,7 @@ const Header =()=>{
                             </Link>
                         </div>
                     </div>
+                    }
                 </div>
              </div>
             </div>

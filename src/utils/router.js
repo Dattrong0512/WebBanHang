@@ -4,7 +4,7 @@ export const ROUTERS =
         HOME: "",
         PROFILE: "thong-tin-ca-nhan",
         PRODUCTS:"/san-pham",
-
+        
     },
    
 }
