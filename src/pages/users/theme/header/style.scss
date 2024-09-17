@@ -361,14 +361,12 @@ $bannerImg: "/assets/users/images/hero/anhraucuqua.jpg";
             height: 50px !important;
         }
     }
-    .hero__search__phone{
-
-    }
-    
 }
 @include Responsive($SMALL_DEVICE)
 {   
-    
+    .hero__search__phone{
+        margin-top: 10px;    
+    }
     .hero__search_form{
         width: 350px !important;;
         button{

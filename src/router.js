@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import MasterLayout from "./pages/users/theme/masterLayout";
 import ProfilePage from "./pages/users/profilePage";
 import ProductsPage from "./pages/users/productsPage";
+import ProductDetailPage from "./pages/users/ProductDetailPage";
 import React from 'react';
 
 
@@ -21,6 +22,10 @@ const renderUserRouter = () =>
         {
             path: ROUTERS.USER.PRODUCTS,
             component: <ProductsPage/>,
+        },
+        {
+            path: ROUTERS.USER.PRODUCT,
+            component: <ProductDetailPage/>,
         },
     ];
     return (

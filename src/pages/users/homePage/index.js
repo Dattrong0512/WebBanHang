@@ -9,7 +9,7 @@ import cat1Img from "assets/users/images/categories/anhcamtuoi.png";
 import cat2Img from "assets/users/images/categories/anhraucutuoi.jpg";
 import cat3Img from "assets/users/images/categories/anhsuahop.jpg";
 import cat4Img from "assets/users/images/categories/hoaquakho.jpg";
-import cat5Img from "assets/users/images/categories/thibo.jpg";
+import cat5Img from "assets/users/images/categories/thitbo.jpg";
 import feature1Img from "assets/users/images/featured/feature-1.jpg";
 import feature2Img from "assets/users/images/featured/feature-2.jpg";
 import feature3Img from "assets/users/images/featured/feature-3.jpg";
