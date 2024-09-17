@@ -12,6 +12,13 @@ import{BiUser} from  "react-icons/bi";
 import{MdEmail} from  "react-icons/md";
 // import { useRef } from "react";
 // import { useEffect } from "react";
+export const categories = [
+    "Thịt tươi",
+    "Rau củ",
+    "Nước trái cây",
+    "Trái cây",
+    "Hải sản"
+];
 const Header =()=>{
     const location = useLocation();
     const[isShowHamburger,setShowHamburger]=useState(false);
@@ -56,13 +63,7 @@ const Header =()=>{
             },
         ]
     )
-    const categories = [
-        "Thịt tươi",
-        "Rau củ",
-        "Nước trái cây",
-        "Trái cây",
-        "Hải sản"
-    ];
+    
     useEffect( () => {
         const isHome = location.pathname.length <= 1;
         setIsHome(isHome);
