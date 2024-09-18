@@ -23,6 +23,24 @@ body{
     display: flex;
     flex-wrap: wrap;
 }
+.section-title{
+    margin-bottom: 50px;
+    text-align: center;
+    h2{
+        position: relative;
+    }
+    h2:after{
+        position: absolute;
+        left: 0;
+        bottom: -15px;
+        right: 0;
+        height: 4px;
+        width: 80px;
+        background: map.get($theme-color,"main");
+        content: "";
+        margin: 0 auto ;
+    }
+}
 .col-6{
     flex: 0 0 50%;
     max-width: 50%;
@@ -129,8 +147,8 @@ textarea{
         flex: 0 0 100%;
         max-width: 100%;
     }
-}
-@include Responsive($SMALL_DEVICE)
+}@include Responsive($SMALL_DEVICE)
+
 {
     .container{
         max-width: 350px !important;
