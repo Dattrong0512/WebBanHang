@@ -7,11 +7,8 @@ import { AiOutlineDownCircle, AiOutlineFacebook, AiOutlineInstagram, AiOutlineLi
 import { Link } from "react-router-dom";
 import { formatter } from "utils/formater";
 import { ROUTERS } from "utils/router";
-import { SassFunction } from "sass";
 import{BiUser} from  "react-icons/bi";
 import{MdEmail} from  "react-icons/md";
-// import { useRef } from "react";
-// import { useEffect } from "react";
 export const categories = [
     "Thịt tươi",
     "Rau củ",
@@ -36,7 +33,7 @@ const Header =()=>{
             },
             {
                 name: "Sản phẩm",
-                path: "",
+                path: ROUTERS.USER.PRODUCT,
                 isShowSubmenu: false,
                 child: [
                     {
@@ -75,7 +72,7 @@ const Header =()=>{
         <div/>
         <div className={`hamburger__menu__wrapper ${isShowHamburger ? "show" : ""}`}>
             <div className="header__logo">
-                <h1>SIVI SHOP</h1>
+                <h1>ĐT SHOP</h1>
             </div>
             <div className="hamburger__menu__cart">
                 <ul>
@@ -87,7 +84,7 @@ const Header =()=>{
                     </li>
                 </ul>
                 <div className="header__cart_price">
-                    Gio hàng <span>{formatter(1001230)}</span>
+                    Giỏ hàng <span>{formatter(1001230)}</span>
                 </div>
             </div>
             <div className="hamburger__menu__widget">
@@ -180,7 +177,7 @@ const Header =()=>{
                 <div className="row">
                     <div className="col-lg-3" >
                     <div className="header__logo">
-                        <h1>Đạt Trọng</h1>
+                        <h1>Đạt Trọng SHOP</h1>
 
                     </div>
                     </div>

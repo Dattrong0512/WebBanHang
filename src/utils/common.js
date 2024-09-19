@@ -60,7 +60,7 @@ export const featureProducts={
                 name:"Thịt bò nạc",
                 price: 20000
             }
-        ]
+        ],
     },
     fruits:{
         title: "Trái cây",
