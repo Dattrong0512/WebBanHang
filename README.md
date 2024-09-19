@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+# [WEB ĐT SHOP](https://dattrongshop.netlify.app/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## FRONT-END
 
-## Available Scripts
+### HTML
+- Sử dụng cấu trúc HTML để xây dựng giao diện trang web.
 
-In the project directory, you can run:
+### CSS / SCSS
+- Sử dụng **SASS** để tối ưu khả năng viết mã CSS với các tính năng:
+  - **Nesting**: Giúp tổ chức mã CSS dễ đọc hơn thông qua việc lồng các quy tắc.
+  - **Inheritance**: Tái sử dụng các thuộc tính CSS qua việc kế thừa lớp.
+  - **Mixin và Hàm**: Giúp tái sử dụng mã CSS và dễ dàng thêm các tính năng phức tạp.
+  
+  Ví dụ: Bạn sử dụng các file `style.scss` và `header.scss` để quản lý phong cách giao diện, đảm bảo tính thẩm mỹ và khả năng mở rộng của dự án.
 
-### `npm start`
+### JavaScript
+- Sử dụng **ReactJS** làm framework chính để xây dựng giao diện người dùng với các thành phần:
+  - **React.memo**: Được sử dụng để tối ưu hóa hiệu suất render trong các thành phần như `Breadcrumb`, `ProductDetailPage`, và `Header`.
+  
+### Các thư viện sử dụng
+- **React Router**: Điều hướng trang thông qua `Link` và cấu hình router từ `ROUTERS`.
+- **React Icons**: Hiển thị các icon từ thư viện `react-icons` cho các chức năng như giỏ hàng, đăng nhập, và chia sẻ mạng xã hội.
+  - Các icon nổi bật bao gồm: `AiOutlineFacebook`, `AiOutlineShoppingCart`, `BiUser`, `AiOutlineInstagram`, v.v.
+  
+- **Formatter Utility**: Sử dụng `formatter` để định dạng giá trị như giá tiền trong các giao diện sản phẩm.
+  
+### Quản lý hình ảnh và dữ liệu sản phẩm
+- Các hình ảnh sản phẩm như `cat1Img`, `cat2Img`, `cat3Img` được quản lý và hiển thị trên trang chi tiết sản phẩm.
+- Sản phẩm được hiển thị với các thông tin quan trọng như số lượng, giá cả, tình trạng còn hàng.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Các thư viện bổ sung
+- **React-Multi-Carousel**: Được sử dụng để hiển thị các thành phần sản phẩm dưới dạng băng chuyền.
+- **React-Tabs**: Quản lý các tab hiển thị thông tin chi tiết sản phẩm.
+  
+### JavaScript ES6+
+- Bạn sử dụng các tính năng hiện đại của ES6+ như:
+  - **Arrow Functions**
+  - **Destructuring**
+  - **useState** và **useEffect** hooks để quản lý trạng thái và vòng đời của các thành phần.
+## Đường link trang web: https://dattrongshop.netlify.app/
